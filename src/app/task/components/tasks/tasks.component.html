@@ -1,0 +1,43 @@
+<h2>Today`s Tasks</h2>
+<h3 *ngIf="selectedTask">SelectedTask: {{ selectedTask.title }}</h3>
+<input
+  id="taskTitleInput"
+  type="text"
+  #taskTitle
+  placeholder="Please input task"
+/>
+
+<!-- task-input -->
+<div *ngIf="selectedTask">
+  <div class="taskInput">
+    <button
+      class="update"
+      (click)="update(taskTitle.value, selectedTask); taskTitle.value = ''"
+    >
+      Update
+    </button>
+    <button class="update" (click)="selectedTask = null; taskTitle.value = ''">
+      Cansel
+    </button>
+  </div>
+</div>
+<div *ngIf="!selectedTask">
+  <div class="taskInput">
+    <button id="addBtn" (click)="add(taskTitle.value); taskTitle.value = ''">
+      Add
+    </button>
+  </div>
+</div>
+<!-- task-input -->
+
+<!-- taskList -->
+<ul class="taskList">
+  <li *ngFor="let task of tasks" class="taskItem">
+    <span class="cursor" (click)="onSelect(task)">{{ task.title }}</span>
+    <button class="taskIcon" (click)="onSelectEdit(task); taskTitle.value = ''">
+      Edit
+    </button>
+    <button class="taskIcon" (click)="delete(task)">Delete</button>
+  </li>
+</ul>
+<!-- taskList -->

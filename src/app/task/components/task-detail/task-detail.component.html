@@ -1,0 +1,10 @@
+<div *ngIf="task">
+  <div class="details">
+    <h2>{{ task.title }}</h2>
+    <p>Created at</p>
+    <h3>{{ task.createdAt }}</h3>
+    <p>Updated at</p>
+    <h3>{{ task.updatedAt }}</h3>
+  </div>
+  <button id="clearBtn" (click)="clear()">clear</button>
+</div>

@@ -1,0 +1,30 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.containerTasks {
+  background-color: #555555;
+  height: 98vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.appTasks {
+  background-color: #292f38;
+  width: 30%;
+  min-width: 450px;
+  min-height: 500px;
+  padding: 30px;
+  margin-right: 100px;
+  border-radius: 5px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+.appDetails {
+  background-color: #292f38;
+  width: 20%;
+  min-width: 350px;
+  min-height: 350px;
+  padding: 20px;
+  margin-left: 100px;
+  border-radius: 5px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
